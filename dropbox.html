@@ -1,0 +1,253 @@
+<!doctype html>
+<!--All Images and Videos were moved to an online repository to comply with size limit of submission. The online repository is located at https://github.com/EllyKonjkav/WebDevFPResources (My personal online repository)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+<!--    I wanted anyone who has bad eye sight or who are older to be able to zoom in, so I set the Maximum-scale to 3.0-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grazing Art Web Dev Final Project</title>
+    
+<!--    I called the Bootstrap CSS file first to make use of that and then I called my own custom styled CSS so that it would overrride and it would have all of my personal touches.-->
+    <link rel="stylesheet" href="/resources/stylesheet/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/resources/stylesheet/style.css">
+</head>
+<body>
+<header>
+<!--    I really wanted the Nav bar to be sticky so that anyone could navigate to any other page really easily and not have to scroll to the top to be able to get to another page. I also thought the dark background with white on top is easy to read and has the clean look that I was trying to achieve. I also made the Grazing Art linked to the home page. I made the Grazing Art to be always "active" (White). The page that the visitor is on will also become "active" and the rest to be muted so that they stand out.  I also did the data-toggle so that if it's on a small device, it will be easy to navigate-->
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">Grazing Art</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tutorials.html">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="article.html">Article</a>
+                </li> 
+<!--                    I Put this category as Inspiration (with a dropdown) so that all the things that are in that category will be grouped together and easy to find!-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                        Inspirations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="gallery.html">Gallery</a>
+                        <a class="dropdown-item" href="workshops.html">Workshops/Classes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="instastars.html">Instagram stars</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="safety.html">Safety and Tips</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/report/report.html">See Project Report Here</a>
+                </li>
+            </ul>   
+
+        </div>
+    </nav>
+    
+<!--    I thought it would be beautiful to have a carousel at the top of every page for even more inspiration. The pictures are colourful and pop. I decided to use the Bootstrap carousel as it was so seamless. I was easy to make it into an automatic slideshow and add slide indicators at the bottom and arrows that would be easy to navigate between the pictures. -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/m2P8yOuw.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"  src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/brunch1.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/LTP1w-1w.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/daei.png" alt="fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/brunch2.png" alt="Fifth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/wedding.png" alt="sixth slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</header>
+   
+<!--    This entire part is written by myself (I had a catering business and so am familiar with food handling and safety) I have used and unordered list to break up the text so that it's easy to read. I used the py-5 to add a padding that would make the header clear and easy to read as well as being prominent. I added an "Alert" that's a disclaimer. I also added my own custom style css-->
+<section class="py-5">
+    <div class="container">
+        <h5 class="m-5"> Food safety</h5>
+        <div class="alert alert-danger m-5" role="alert">
+  Please refer to your local authorities for proper safety standards. The following list is not exhaustive and merely a starting point
+</div>
+        
+        <div class="col-12 col-lg-12 safety">
+                
+            <ul>
+                <li>Make sure the board  or surface that you are using is food safe. If it is not food safe, Put a food safe parchment paper before you place any food on it. </li>
+                <li>Ask your geusts/clients about food allergies/restrictions. Are they allergic to nuts or Gluten or anything else? Do they only eat Halal food or keep kosher? Are they vegan or vegetarians?</li>
+                <li>Use gloves while preparing anything before hand and make sure you are careful about cross contamination. Cover all food properly and use clean gloves while setting up. Change gloves during the set up to prevent cross contamination</li>
+                <li>Do not work if you are sick and use a mask at all times while preparing and setting up</li>
+                <li>Cheese and meat should not stay out in room temperature for more than 4 hours without extra care. One way is to place food safe ice plates under the cheese and cover it with some green to stretch that time frame.</li>
+                <li>Do not mix moist food with dry food</li>
+                <li>Do not place raw food next to other stuff</li>
+                <li>NEVER put food outdoors during summer. This will reduce the safe time frame significantly</li>
+                <li>Make sure to clearly lable allergies</li>
+                <li>Put abundant serving utensils such as forks, spoons, thongs etc, to prevent anyone using their hands. If it's their first time, serve them to show them</li>
+                <li>If you feel something has been contaminated while everyone is eating, stop them and discard that food and things around it</li>
+                <li>Do not place hot food and cold food next to each other</li>
+            </ul>
+        </div>
+        
+       
+    </div>        
+</section>
+       
+<!--I thought that it would be nice to break the two parts with some more pictures of grazing. The picutres are my own. This time I divided the column into 6 parts so that if they were to view it ona small device, it would show  up the same way as on the large screen (side by side and not vertical)   -->
+<section>
+    <div class="container">
+    
+     <div class="row">
+            <div class="col-6 col-md-6">
+                <img class="d-block w-100" height="100%" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/brunch/20191215_113428.jpg" alt="My brunch grazing board">
+            </div>
+            <div class="col-6 col-md-6">
+                <img class="d-block w-100" height="100%" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/characuterie/20191128_114412.jpg" alt="My thanksgiving grazing board">
+    
+            </div>
+        </div>
+    </div>
+    </section>
+    
+<!--    I added the py-5 padding at the top so that the header would stand out. I have used and unordered list to break up the text so that it's easy to read. I also used the 12 columns so that I would make use of the entire space and center my write up using the container. I also added my own personal css -->
+    <section class="py-5">
+    <div class="container">
+        <h5 class="m-5"> Tips & Tricks</h5>
+        
+        <div class="col-12 col-lg-12 tip">
+        
+            <ul>
+                <li>Colourful fruits, berries and veggies are your best friend. Purple cauliflower? Perfect! Small colourful peppers, coloured peppers, dried apricots and persimmon, Pomegranates, mangoes, red walnuts (Yes, they exist and they are delicious!), watermelon radishes, rainbow beets... </li>
+                <li>Garnish all dips and solid coloured stuff like cheese, bread etc with something vibrant like rosemary, cherry tomatoes on the vine (or not), some berrie, etc.</li>
+                <li>Figure out your style and build on it. Trust me, everyone has a style. Don't try to copy someone, learn from them and implement it into your own style.</li>
+                <li>Prep everything before hand. It takes a LONG time to set up. Cut everything before hand, group them together and make it easy to see what you have on hand. I like to write out how I want to set it up (rough idea, because you never truly know until you do it)</li>
+                <li>If you are doing a grazing table vs a grazing board, then ask someone to help you,  that works well with you! It's a lot of details and an extra pair of hands (or two) is a lifesaver</li>
+                <li>Do not put food that needs to be served hot, it will make your life difficult. Try foods that are served cold or room temp.</li>
+                <li>Cookies, especially if colourful, and elegant desserts will elevate your board. I love to have something sweet and something salty at the same time.</li>
+                <li>Try to avoid lots of small finger foods (unless you have a lot of help) and try to minimize anything that needs a lot of last minute work/set up.</li>
+                <li>Try to avoid ingredients that will go bad once out (avocadoes, bananas, peaches etc) but you can of course put lemon juice on them and use them if you insist</li>
+                <li><b><i>ENJOY YOURSELF AND YOUR CREATION!</i></b></li>
+            </ul>
+    </div>
+</div>
+</section>
+    
+<!--    I know most people get very confused while on websites, especially if they are older and navigation always seems to be an issue so I thought i'll add cards to be permanently at the bottom of the page to act as a secondary navigation to the most popular pages: The tutorial, the Gallery and the Insta stars (I thought since these are in the Inspiration and maybe some might not be savy enough to navigate through it, then why not have it as cards, with attractive pictures and a very user friendly stretched link to encourage them to go to those pages. Setting the Cards as Rows was great because then I could control the size, the format and how I wanted them to look. on a phone it would be vertical and on a larger devide it would be vertical. I wanted it to be a stretched link because most people like to click on a picture instead of a specific button. I also gave each button a different colour so that it would pop and attract attention.-->
+<section class="py-5">
+    <div class="container">
+        <h5 class="m-5">Explore the art of grazing</h5>
+
+        <div class="row">
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/71175073_985903641765446_1757927023360885822_n.jpg" alt="Tutorial">
+                    <div class="card-body">
+                        <h5 class="card-title">Tutorials</h5>
+                        <p class="card-text">Click to go to the tutorials we have put together from leading grazing businesses/influencers around the world!</p>
+                        <a href="tutorials.html" class="btn btn-warning stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/brunch/116133865_3128237673936998_4118494496732816930_n.jpg" alt="Blueberry Bagel with fruits">
+                    <div class="card-body">
+                        <h5 class="card-title">Gallery</h5>
+                        <p class="card-text">Click to be inspirated by the leading grazing businesses/influencers or just enjoy the art!</p>
+                        <a href="gallery.html" class="btn btn-success stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/107816164_303142270810787_3578618777712388320_n.jpg" alt="meg with salami rose">
+                    <div class="card-body">
+                        <h5 class="card-title">Instagram Stars</h5>
+                        <p class="card-text">Click to see the list of Instagram stars (from all over the globe) that we have put together for you!</p>
+                        <a href="instastars.html" class="btn btn-danger stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<!--    Since we are in the middle of a pandemic and many workshops and events are cancelled, food business has suffered significantly. So I thought I would set up an email list so that we could update them periodically incase something comes up. I also wanted to be able to encourage more traffic by updating the subscribers with new trends and tips as I would see them. -->
+<section class="py-5">
+    <div class="container">
+        <h5 class="m-5">Join our mailing list to get the latest updates</h5>
+
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" class="form-control" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    The footer is to represent that this is a student project and in no way is it a commercial website. -->
+
+<footer class="mt-5">
+    <div class="footer">
+        Grazing Art. All rights reserved. 2020 (This Website was created for Web Dev student FP in Aug 2020)
+    </div>
+</footer>
+    
+<!--    I have added all the vendors, downloaded in the /resources/vendors folder. However, since cdn files use cache and will help to use the best server available and to piggyback on any existing cached libraries used by other websites (which is most websites),then I knew it would help my pages load faster. -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<!--All Images and Videos were moved to an online repository to comply with size limit of submission. The online repository is located at https://github.com/EllyKonjkav/WebDevFPResources (My personal online repository)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+<!--    I wanted anyone who has bad eye sight or who are older to be able to zoom in, so I set the Maximum-scale to 3.0-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grazing Art Web Dev Final Project</title>
+    
+<!--    I called the Fancybox CSS and Bootstrap CSS file first to make use of that and then I called my own custom styled CSS so that it would overrride and it would have all of my personal touches.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="/resources/stylesheet/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/resources/stylesheet/style.css">
+</head>
+<body>
+<header>
+<!--    I really wanted the Nav bar to be sticky so that anyone could navigate to any other page really easily and not have to scroll to the top to be able to get to another page. I also thought the dark background with white on top is easy to read and has the clean look that I was trying to achieve. I also made the Grazing Art linked to the home page. I made the Grazing Art to be always "active" (White). The page that the visitor is on will also become "active" and the rest to be muted so that they stand out.  I also did the data-toggle so that if it's on a small device, it will be easy to navigate-->
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">Grazing Art</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tutorials.html">Tutorials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="article.html">Article</a>
+                </li> 
+<!--                    I Put this category as Inspiration (with a dropdown) so that all the things that are in that category will be grouped together and easy to find!-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                        Inspirations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="gallery.html">Gallery</a>
+                        <a class="dropdown-item" href="workshops.html">Workshops/Classes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="instastars.html">Instagram stars</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="safety.html">Safety and Tips</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/report/report.html">See Project Report Here</a>
+                </li>
+            </ul>   
+
+        </div>
+    </nav>
+    
+<!--    I thought it would be beautiful to have a carousel at the top of every page for even more inspiration. The pictures are colourful and pop. I decided to use the Bootstrap carousel as it was so seamless. I was easy to make it into an automatic slideshow and add slide indicators at the bottom and arrows that would be easy to navigate between the pictures. -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/m2P8yOuw.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"  src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/brunch1.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/LTP1w-1w.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/daei.png" alt="fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/brunch2.png" alt="Fifth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/wedding.png" alt="sixth slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</header>
+    
+    
+<!-- I put a py-5 padding so that there was enough space after the carousel to allow for the heading to be visible without being too busy. I decided to use Fancybox javascript (vendor) to help with the ease of creating a gallery and then a modal carousel. This was vital for videos because I could not find other vendors that could do this for videos. I tried using lightbox but it wouldn't work for videos. Fancybox made it so much easier and visually pleasing. The carousel has a back and forth button, an auto play button and the option to go full screen and to mute the music on the video.  I also added some padding between the thumbnails so that they won't be too stuck together   -->
+    <section class="py-5">
+        <div class="container">
+        <h5 class="m-5">Video Tutorials</h5>
+<!--            #1-->
+            <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/10000000_116805766416136_4644293713941125924_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/10000000_116805766416136_4644293713941125924_n.mp4" class="mb-2" >
+                </video>
+            </a>
+            
+            
+<!--            #2-->
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/115879287_1382968038569100_6756681352086621272_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/115879287_1382968038569100_6756681352086621272_n.mp4" class="mb-2" >
+                </video>
+            </a>
+            
+            
+<!--            #3-->
+            
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/117763495_1112761539119563_6894372422495842752_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/117763495_1112761539119563_6894372422495842752_n.mp4" class="mb-2" >
+                </video>
+            </a>
+             
+            
+<!--            #4-->
+            <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/116339991_611917882847310_3817880222268710959_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/116339991_611917882847310_3817880222268710959_n.mp4" class="mb-2 mb-custom" width="28%">
+                </video>
+            </a>
+            
+<!--            #5-->
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/117880522_210574663731620_7162279163333889041_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/117880522_210574663731620_7162279163333889041_n.mp4" class="mb-2" >
+                </video>
+            </a>
+            
+<!--            #6-->
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/78934387_2839488769415339_9194166371592191259_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/78934387_2839488769415339_9194166371592191259_n.mp4" class="mb-2" >
+                </video>
+            </a>
+            
+            <!--            #7-->
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/88074467_1823309144470117_1297122996764002480_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/88074467_1823309144470117_1297122996764002480_n.mp4" class="mb-2" >
+                </video>
+            </a>
+            
+            <!--            #8-->
+             <a class="fancybox" data-fancybox="gallery" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/92360514_218763839431835_4470308553201048575_n.mp4">
+                <video src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/video/92360514_218763839431835_4470308553201048575_n.mp4" class="mb-2 mb-custom" width="25%">
+                </video>
+            </a>
+            
+        </div>
+    </section>
+    
+    
+<!-- I put a py-5 padding so that there was enough space after the first gallery to allow for the heading to be visible without being too busy. I decided to use Fancybox javascript (vendor) to help with the ease of creating a gallery and then a modal carousel. It made it so much easier and visually pleasing. The carousel has a back and forth button, an auto play button, a thumbnail view of all the galley and a zoom in/zoom out button. I also added some padding between the pictures so that they won't be too stuck together   -->
+    <section class="py-5">
+        <div class="container">
+            <h5 class="m-5">Picture Tutorials</h5>
+            
+<!--            #1-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/103574971_183215383144729_3577367823362808612_n.jpg" title="Grazing 1" data-lcl-txt="Details" >
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/103574971_183215383144729_3577367823362808612_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #2-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/82871576_704004263768718_5586930551903226616_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/82871576_704004263768718_5586930551903226616_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #3-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/106412206_2826790964203428_3627830910798876936_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/106412206_2826790964203428_3627830910798876936_n.jpg" class="mb-2" >
+            </a>
+    
+<!--            #4-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/106588295_294897058365776_6821183549685443418_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/106588295_294897058365776_6821183549685443418_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #5-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117409148_301563857957950_4995871930497543176_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117409148_301563857957950_4995871930497543176_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #6-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117630479_301922347552534_5049251641117645359_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117630479_301922347552534_5049251641117645359_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #7-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/87740521_253198595698153_6557520778917854334_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/87740521_253198595698153_6557520778917854334_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #8-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89296254_623499774893687_6967575928089334396_n.jpg" >
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89296254_623499774893687_6967575928089334396_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #9-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/brunchDetail.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/brunchDetail.jpg" class="mb-2" >
+            </a>
+            
+<!--            #10-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/brunch.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/brunch.jpg" class="mb-2" >
+            </a>
+            
+<!--            #11-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/76847153_474185766854251_4530025590264155587_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/76847153_474185766854251_4530025590264155587_n.jpg" class="mb-2" >
+            </a>
+            
+    <!--            #12-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/76876300_749820062193303_5521353500942537945_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/76876300_749820062193303_5521353500942537945_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #13-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/71175073_985903641765446_1757927023360885822_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/71175073_985903641765446_1757927023360885822_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #14-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/72927956_2464548127094638_2012575226953666201_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/72927956_2464548127094638_2012575226953666201_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #15-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83894171_593265741226492_4785311182638940259_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83894171_593265741226492_4785311182638940259_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #16-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/85065811_133959024834422_3150207776930077074_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/85065811_133959024834422_3150207776930077074_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #17-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/74685375_458437851722902_7788964681661029332_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/74685375_458437851722902_7788964681661029332_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #18-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/75239243_135354101218176_6690748990753213023_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/75239243_135354101218176_6690748990753213023_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #19-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/84746746_125880018700550_3938840855654644835_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/84746746_125880018700550_3938840855654644835_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #20-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/82622867_2635416613358524_688989724053525257_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/82622867_2635416613358524_688989724053525257_n.jpg" class="mb-2" >
+            </a>
+    
+<!--            #21-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83191355_144238267049598_116679102847631617_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83191355_144238267049598_116679102847631617_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #22-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83070379_508015930124619_6273253851254905727_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83070379_508015930124619_6273253851254905727_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #23-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89818892_2558010961155035_6109522389749909269_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89818892_2558010961155035_6109522389749909269_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #24-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89744559_924516364676157_7063110001224966261_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/89744559_924516364676157_7063110001224966261_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #25-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83282228_626592298126595_7435333072446242112_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83282228_626592298126595_7435333072446242112_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #26-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/84287767_122672542415625_5270171733879959803_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/84287767_122672542415625_5270171733879959803_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #27-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117761206_1389868954550763_5000400392512330946_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic//117761206_1389868954550763_5000400392512330946_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #28-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117878460_321787102471145_3396210513010190775_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/117878460_321787102471145_3396210513010190775_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #29-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83490705_3127938017230102_8901356315726303328_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/83490705_3127938017230102_8901356315726303328_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #30-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/87672189_133606498086833_7532162925549902369_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/87672189_133606498086833_7532162925549902369_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #31-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/109504884_121827379294731_8224948033766350653_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/109504884_121827379294731_8224948033766350653_n.jpg" class="mb-2" >
+            </a>
+            
+<!--            #32-->
+            <a class="fancybox" data-fancybox="gallery1" href="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/107548906_767937807277710_4241831543525265719_n.jpg">
+                <img src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/107548906_767937807277710_4241831543525265719_n.jpg" class="mb-2" >
+            </a>
+            
+        </div>
+    </section>
+
+    
+<!--    I know most people get very confused while on websites, especially if they are older and navigation always seems to be an issue so I thought i'll add cards to be permanently at the bottom of the page to act as a secondary navigation to the most popular pages: The tutorial, the Gallery and the Insta stars (I thought since these are in the Inspiration and maybe some might not be savy enough to navigate through it, then why not have it as cards, with attractive pictures and a very user friendly stretched link to encourage them to go to those pages. Setting the Cards as Rows was great because then I could control the size, the format and how I wanted them to look. on a phone it would be vertical and on a larger devide it would be vertical. I wanted it to be a stretched link because most people like to click on a picture instead of a specific button. I also gave each button a different colour so that it would pop and attract attention.-->
+<section class="py-5">
+    <div class="container">
+        <h5 class="m-5">Explore the art of grazing</h5>
+
+        <div class="row">
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/tutorials/pic/71175073_985903641765446_1757927023360885822_n.jpg" alt="Tutorial">
+                    <div class="card-body">
+                        <h5 class="card-title">Tutorials</h5>
+                        <p class="card-text">Click to go to the tutorials we have put together from leading grazing businesses/influencers around the world!</p>
+                        <a href="tutorials.html" class="btn btn-warning stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/brunch/116133865_3128237673936998_4118494496732816930_n.jpg" alt="Blueberry Bagel with fruits">
+                    <div class="card-body">
+                        <h5 class="card-title">Gallery</h5>
+                        <p class="card-text">Click to be inspirated by the leading grazing businesses/influencers or just enjoy the art!</p>
+                        <a href="gallery.html" class="btn btn-success stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4 mb-md-0 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/107816164_303142270810787_3578618777712388320_n.jpg" alt="meg with salami rose">
+                    <div class="card-body">
+                        <h5 class="card-title">Instagram Stars</h5>
+                        <p class="card-text">Click to see the list of Instagram stars (from all over the globe) that we have put together for you!</p>
+                        <a href="instastars.html" class="btn btn-danger stretched-link">click here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    Since we are in the middle of a pandemic and many workshops and events are cancelled, food business has suffered significantly. So I thought I would set up an email list so that we could update them periodically incase something comes up. I also wanted to be able to encourage more traffic by updating the subscribers with new trends and tips as I would see them. -->
+<section class="py-5">
+    <div class="container">
+        <h5 class="m-5">Join our mailing list to get the latest updates</h5>
+
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" class="form-control" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    The footer is to represent that this is a student project and in no way is it a commercial website. -->
+
+<footer class="mt-5">
+    <div class="footer">
+        Grazing Art. All rights reserved. 2020 (This Website was created for Web Dev student FP in Aug 2020)
+    </div>
+</footer>
+    
+<!--    I have added all the vendors, downloaded in the /resources/vendors folder. However, since cdn files use cache and will help to use the best server available and to piggyback on any existing cached libraries used by other websites (which is most websites),then I knew it would help my pages load faster. -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>  
+    
+    <script>
+    //         advance use of JavaScript for styling a class. I wanted my thumbnails to become the same size and have a border instead of looking plane. I decided to use javascript (jQuery) to customize the size of my thumbnails and then add a border and crop it to fit the box that I created. This is the difference that made the entire gallery look uniform instead of each thumbnail being differently sized. i added the .not("mb-custom) so that I could exclude the two videos that I had customized the size in line. This could have also been achieved with CSS styling but i prefered to use JS to showcase my knowledge.
+        $(document).ready(function(){
+            $(".mb-2").not(".mb-custom").css("width","20%") ;
+            $(".mb-2").css("object-fit","cover") ;
+            $(".mb-2").css("border","5px solid grey") ;
+        });
+    </script>
+    
+    </body>
+    
+
+    
+
+
+</html>

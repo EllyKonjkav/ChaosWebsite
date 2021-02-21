@@ -1,0 +1,129 @@
+/*This style.css file is meant to override the bootstrap CSS anf Fancybox CSS file with my own customized style */
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+/*No media query for `xs` since this is the default in Bootstrap*/
+
+/*Small (-sm-) devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+/*Medium (-md-) devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+/*Large (-lg-) devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+/*Extra large (-xl-) devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+/* Header
+---------------------------------------------------------------------------------------------------------------*/
+#header{padding:30px 0; text-align:left; text-transform:capitalize;}
+#logo *{margin:10; padding:30;}
+#logo h1{font-size:42px;}
+
+/* Rows*/
+.row0{color:#F7F7F7; background-color:rgba(0,0,0,.5);}
+.row0 a{color:inherit; background-color:transparent;}
+.row0{border-radius:25px 25px 0 0;}
+.row1, .row1 a{}
+
+/*I wanted this to create my own custom colour for the background of the nav bar*/
+nav {
+/*    background-color: #545454;*/
+    
+}
+
+.header-secondnav {
+    font-size: 1.25rem;
+}
+
+/*Since all images were of different sizes, and I didn't want the carousel to change size with each picture, I decided to put a maximum height for it*/
+.carousel-item {
+    max-height: 350px;
+}
+
+/*h5 is used extensively in my website and I wanted it to always be uppercase, center aligned, with a light font weight and certain size. I also wanted it to have a red line at the bottom so I added a border-bottom with 2px.*/
+.navbar-brand{
+    color: white;
+}
+
+h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    border-bottom: 2px solid red;
+    }
+
+/*Since this is to represent an alert I wanted it to be center-aligned and all uppercase to emphasize the importance*/
+.alert {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*This was to control the text size for my article and other parts that use the lead class*/
+.lead {
+    font-size: 20px;
+}
+
+/*For the workshop class, i needed the cards to have a bottom padding so that they were not stuck together and they would have a more clean look*/
+.workshop {
+    padding-bottom: 10px;
+}
+
+/*For the insta stars cards, i wanted it to have some top and bottom padding to be aesthetically pleasing*/
+.insta {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    
+}
+
+/*For the pictures in the article, I wanted them to have spacing at the bottom so they would appear to be floating and not stuck together*/
+.article {
+    padding-bottom: 30px;
+}
+
+/*For the second row of pictures in the article, i felt that they were a bit too big and wanted to set a maximum height besides the bottom padding. */
+.article1 {
+    padding-bottom: 30px;
+    max-height: 650px;
+}
+
+/*I wanted the font and font weight to be changed in the Food safety part to make it more legible and easy to read*/
+.safety {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/*I wanted the tips section to be different from the safety section and so i changed the style to oblique*/
+.tip {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+/*I wanted the input part of the form to become italic so that it was more beautiful*/
+.form-control {
+    font-style: italic;
+}
+
+/*I wanted the footer box to become gray, with a certain height of 50px. I also wantedd it to become a flex display in the center  and aligned in the center, and white in colour. This basically means i wanted my text to be in the center in all aspects*/
+footer {
+    background-color: dimgray;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+/*This is to adjust the font size of the footer class which is the text in the footer box. */
+.footer {
+    font-size: 15px;
+}

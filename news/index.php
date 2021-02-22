@@ -5,10 +5,10 @@
 ?>
     
 <body>
-<header class="container-fluid bg-dark "> 
+<header class="container-fluid"> 
     <div class="header-firstnav">
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="index.html"><img class="d-none d-sm-block"  src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
+   <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" href="index.php"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
         <img class="d-sm-none" src="/chaos-buzz.jpg"><!-- Image to show on extra small screen (mobile portrait) --></a>
     </nav>
         </div>
@@ -17,7 +17,7 @@
     
     <div class="header-secondnav sticky-top container-fluid">    
 
-    <nav class="navbar navbar-expand-lg col-lg bg-light navbar-light">
+    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:30px">
          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>

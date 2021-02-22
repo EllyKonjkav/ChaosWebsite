@@ -45,17 +45,20 @@ nav {
 
 /*Since all images were of different sizes, and I didn't want the carousel to change size with each picture, I decided to put a maximum height for it*/
 .carousel-item {
-    max-height: 350px;
+    max-height: 150px;
 }
 
 /*h5 is used extensively in my website and I wanted it to always be uppercase, center aligned, with a light font weight and certain size. I also wanted it to have a red line at the bottom so I added a border-bottom with 2px.*/
-.navbar-brand{
-    color: white;
+.navbar-brand
+{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h5 {
     text-transform: uppercase;
     text-align: center;
+    color: white;
     font-weight: 300;
     font-size: 1.5rem;
     border-bottom: 2px solid red;
@@ -121,6 +124,12 @@ footer {
     align-items: center;
     color: white;
     
+}
+
+/*carousel styling */
+.carousel-control-next-icon,
+.carousel-control-prev-icon /*, .carousel-indicators */ {
+    filter: invert(100%);
 }
 
 /*This is to adjust the font size of the footer class which is the text in the footer box. */

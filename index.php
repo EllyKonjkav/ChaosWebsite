@@ -4,10 +4,10 @@
 include "head.php" ;
 ?>
 <body>
-<header class="container-fluid bg-dark "> 
+<header class="container-fluid"> 
     <div class="header-firstnav">
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="index.html"><img class="d-none d-sm-block"  src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" href="index.php"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
         <img class="d-sm-none" src="/chaos-buzz.jpg"><!-- Image to show on extra small screen (mobile portrait) --></a>
     </nav>
         </div>
@@ -15,7 +15,7 @@ include "head.php" ;
     
 <div class="header-secondnav sticky-top container-fluid">    
 
-    <nav class="navbar navbar-expand-lg col-lg bg-light navbar-light">
+    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:30px">
          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@ include "head.php" ;
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/gallery/">Gallery</a>
+                    <a class="nav-link" href="/gallery/">Lab Pics</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -59,24 +59,33 @@ include "head.php" ;
   </nav>
 </div>
 
-<section class="py-1">
-    <div class="container">
+<section>
+    <div class="container-fluid col-md-10" style="background: #FFEFBA; border-radius:50px; /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFEFBA, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFEFBA, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+">
 <!--        Intro to Lab-->
-        <h5 class="m-5">About our lab</h5>
+        <h5 class="m-1">About our lab</h5>
 
         <div class="row">
             <!-- div class="col-12 col-lg-6">
                 <img class="d-block w-100" height="100%" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/characuterie/IMG-20190203-WA0042.jpg" alt="My picture with grazing board">
             </div-->
-	    <div class="col-12 col-lg-6">
+	    <div class="rounded ml-5 col">
 
-	<iframe width=500 height=400 src="/beating.html" title="W3Schools Free Online Web Tutorials">
+	<iframe width=400 height=400 src="/beating.html" title="W3Schools Free Online Web Tutorials">
 	</iframe>
 
 	    </div>
-            <div class="col-12 col-lg-6">
-                <p class="lead">Welcome to <b><i>CHAOS Lab</i></b>. we combine theory, simulation, and experimentation to understand complex cardiometrics.
-                </p>
+            <div class="mr-5 col" style='border-radius:50px;'>
+                <p class="lead">Welcome to <b><i>CHAOS Lab</i></b>. we use a combined approach of theory, simulation, and experiments to investigate complex systems.</p>
+                
+                <p class="lead"><b><i>Experiments in complex systems:</i></b> Cardiac dynamics using micro-electrodes and optical mapping, active media (swarms and murmuration), chemical reactions, table top experiments.</p>
+                
+                <p class="lead"><b><i>Mathematical modeling of complex systems:</i></b> Development and analysis of mathematical models that describe generic or detailed dynamics of excitable and oscillatory media.</p>
+                
+                <p class="lead"><b><i>High performance computing:</i></b> Development and implementation of novel algorithms to solve partial differential equations in two- and three-dimensional regular and irregular domains and parallel computing using GPUs.</p>
             </div> 
         </div>
     </div>
@@ -93,30 +102,31 @@ include "head.php" ;
              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img class="d-block w-100" height="100%" src="/resources/pictures/carousel/breakup.png" alt="First slide">
+                <img class=" mx-auto d-block" src="/resources/pictures/carousel/breakup.png" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100"  height="100%" src="/resources/pictures/carousel/scroll.png" alt="Second slide">
+                <img class=" mx-auto d-block" src="/resources/pictures/carousel/breakup.png" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100"  height="100%" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%204.58.27%20PM.png" alt="Third slide">
+                <img class=" mx-auto d-block" src="/resources/pictures/carousel/breakup.png" alt="Third slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" height="100%" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%204.59.10%20PM.png" alt="fourth slide">
+                <img class="mx-auto d-block" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%204.59.10%20PM.png" alt="fourth slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100"  height="100%" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%204.59.41%20PM.png" alt="Fifth slide">
+                <img class="mx-auto d-block"  src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%204.59.41%20PM.png" alt="Fifth slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100"  height="100%" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%205.00.13%20PM.png" alt="sixth slide">
+                <img class="mx-auto d-block" src="/resources/pictures/carousel/Screen%20Shot%202020-10-10%20at%205.00.13%20PM.png" alt="sixth slide">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev" style="filter: invert(100%)"
+           href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" style="filter: invert(100%)" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
     </div>
@@ -128,7 +138,7 @@ include "head.php" ;
     
 <!--    The footer is to represent that this is a student project and in no way is it a commercial website. -->
 
-<footer class="mt-5">
+<footer class="mt-1">
     <div class="footer">
         CHAOS LAB - Georgia Tech Howey Physics. All rights reserved. 2020
     </div>
@@ -138,6 +148,15 @@ include "head.php" ;
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <style>
+        .carousel-inner img
+        {
+            max-width: 400px;
+            max-height: 400px;
+        }
+    
+    </style>
     
 </body>
 </html>

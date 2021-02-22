@@ -9,7 +9,7 @@
 <header class="container-fluid"> 
     <div class="header-firstnav">
     <nav class="navbar navbar-expand-sm navbar-dark">
-        <a class="navbar-brand" href="index.php"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
+        <a class="navbar-brand" href="/"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
         <img class="d-sm-none" src="/chaos-buzz.jpg"><!-- Image to show on extra small screen (mobile portrait) --></a>
     </nav>
         </div>
@@ -17,7 +17,7 @@
     
 <div class="header-secondnav sticky-top container-fluid">    
 
-    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:30px">
+    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:15px">
          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -635,9 +635,9 @@
 -->
     
     
-<!--    The footer is to represent that this is a student project and in no way is it a commercial website. -->
+<!--    The footer -->
 
-<footer class="mt-5">
+<footer id="sticky-footer" class="mt-5">
     <div class="footer">
         CHAOS LAB - Georgia Tech Howey Physics. All rights reserved. 2020
     </div>
@@ -655,7 +655,12 @@
             max-width: 200px;
             max-height: 250px;
         
-    }    
+    }
+    
+#sticky-footer
+    {
+        flex-shrink: none;
+    }
 </style>
 </body>
 </html>

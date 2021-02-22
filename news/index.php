@@ -8,7 +8,7 @@
 <header class="container-fluid"> 
     <div class="header-firstnav">
    <nav class="navbar navbar-expand-sm navbar-dark">
-        <a class="navbar-brand" href="index.php"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
+        <a class="navbar-brand" href="/"><img class="rounded img-fluid d-none d-sm-block" src="/resources/pictures/header.png" height="100" alt="Chaos logo"><!-- Image to show on screens from small to extra large -->
         <img class="d-sm-none" src="/chaos-buzz.jpg"><!-- Image to show on extra small screen (mobile portrait) --></a>
     </nav>
         </div>
@@ -17,7 +17,7 @@
     
     <div class="header-secondnav sticky-top container-fluid">    
 
-    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:30px">
+    <nav class="navbar navbar-expand-md col-sm navbar-dark" style="background-color: #5faff5; border-radius:15px">
          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -266,9 +266,9 @@
 -->
     
     
-<!--    The footer is to represent that this is a student project and in no way is it a commercial website. -->
+<!--    The footer  -->
 
-<footer class="mt-5">
+<footer id="sticky-footer" class="mt-5">
     <div class="footer">
         CHAOS LAB - Georgia Tech Howey Physics. All rights reserved. 2020
     </div>
@@ -278,7 +278,12 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        #sticky-footer {
+  flex-shrink: none;
+}
     
+    </style>
     
 </body>
 </html>

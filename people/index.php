@@ -63,7 +63,7 @@
     
 <section class="py-3 container">
     <div class="col-12 col-lg-12">
-                <img class="mx-auto d-block" height="300px" src="https://ellykonjkav.github.io/WebDevFPResources/resources/images/gallery/characuterie/IMG-20190203-WA0042.jpg" alt="My picture with grazing board">
+                <img class="mx-auto d-block" height="300px" src="pictures/group.png" alt="Group picture">
     </div>
     
     </section>
@@ -73,10 +73,10 @@
         <h5 class="p-2 m-3 text-left" style="color:white">Principle Investigator</h5>
     </div>
     </section>
-    <section class="container">
+    <section class="container people">
         <div class="row">
             <div class="col-12 col-sm-4">
-                <img class="d-block w-50" height="100%" src="pictures/flavio-e1549904301901.jpg" alt="Dr Flavio Fenton">
+                <img class="d-block" src="pictures/flavio-e1549904301901.jpg" alt="Dr Flavio Fenton">
             </div>
             <div class="col-12 col-sm-8">
                 <h3>Professor Flavio Fenton</h3>
@@ -652,8 +652,8 @@
 <style>
 .people img
     {
-            max-width: 200px;
-            max-height: 250px;
+            max-width: 80%;
+            max-height: 80%;
         
     }
     
@@ -661,6 +661,6 @@
     {
         flex-shrink: none;
     }
-</style>
+</style>s
 </body>
 </html>

@@ -65,6 +65,7 @@
 <!--I added the py-5 padding so that the heading would be prominent and easy to read and not be too busy. I made the entire section into a container so that the Bootstrap CSS would added the paddings and alignement. Then I made the cards into rows with the 12 columns and since I wanted 3 cards on each row, I gave each card 4 of the columns. I also wanted the pictures to be on top, then have an intorduction for the picutres (their business or influencer names) and where they are from. I added their Instagram accounts in the stretched link (they can click the entire card to be forwarded) so that visitors/readers can explore more by themselves. I also added my own custom style CSS -->
 <section class="py-5">
     <div class="container">
+        <!--
         <h5 class="m-5">News Articles We Have been featured in</h5>
 
         <div class="row">
@@ -176,6 +177,7 @@
                 </div>
             </div>
         </div>
+        -->
     </div>
 </section>
     

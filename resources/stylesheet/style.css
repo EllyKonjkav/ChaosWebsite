@@ -58,7 +58,7 @@ nav {
 h5 {
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    /* color: white; */
     font-weight: 300;
     font-size: 1.5rem;
     border-bottom: 2px solid red;
